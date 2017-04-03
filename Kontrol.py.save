@@ -1,0 +1,17 @@
+import time
+from Koneksi import Koneksi
+
+class Kontrol:
+	def utama():
+		while True:
+			konek = Koneksi()
+			konek.start()
+			data = konek.getPerintah()
+			if data is not None:
+				data1 = konek.getKategori()				data2 = konek.getStatus()
+			konek.stop()
+			print data
+			print data1
+			print data2
+			time.sleep(5)
+	utama()
